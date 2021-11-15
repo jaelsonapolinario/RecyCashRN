@@ -12,7 +12,7 @@ target 'RecyCashRN' do
     :hermes_enabled => false
   )
 
-  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
 
   target 'RecyCashRNTests' do
     inherit! :complete

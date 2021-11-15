@@ -14,6 +14,16 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8C2D3C1FA3726A70D33382FC /* libPods-RecyCashRN-RecyCashRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5A8C0ED5D0573DB1AFA677 /* libPods-RecyCashRN-RecyCashRNTests.a */; };
+		DE0A6AC92742108E008F1E27 /* Mohave-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6ABF2742108E008F1E27 /* Mohave-Light.ttf */; };
+		DE0A6ACA2742108E008F1E27 /* Mohave-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC02742108E008F1E27 /* Mohave-SemiBoldItalic.ttf */; };
+		DE0A6ACB2742108E008F1E27 /* Mohave-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC12742108E008F1E27 /* Mohave-MediumItalic.ttf */; };
+		DE0A6ACC2742108E008F1E27 /* Mohave-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC22742108E008F1E27 /* Mohave-Italic.ttf */; };
+		DE0A6ACD2742108E008F1E27 /* Mohave-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC32742108E008F1E27 /* Mohave-Medium.ttf */; };
+		DE0A6ACE2742108E008F1E27 /* Mohave-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC42742108E008F1E27 /* Mohave-SemiBold.ttf */; };
+		DE0A6ACF2742108E008F1E27 /* Mohave-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC52742108E008F1E27 /* Mohave-BoldItalic.ttf */; };
+		DE0A6AD02742108E008F1E27 /* Mohave-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC62742108E008F1E27 /* Mohave-LightItalic.ttf */; };
+		DE0A6AD12742108E008F1E27 /* Mohave-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC72742108E008F1E27 /* Mohave-Regular.ttf */; };
+		DE0A6AD22742108E008F1E27 /* Mohave-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE0A6AC82742108E008F1E27 /* Mohave-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +53,16 @@
 		BAC9FCC2828B5E41998DDAEB /* libPods-RecyCashRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecyCashRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E285A0D2D11A6E77546E6B /* Pods-RecyCashRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecyCashRN.release.xcconfig"; path = "Target Support Files/Pods-RecyCashRN/Pods-RecyCashRN.release.xcconfig"; sourceTree = "<group>"; };
 		CFA864165E4DA340ED5DF8F6 /* Pods-RecyCashRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecyCashRN.debug.xcconfig"; path = "Target Support Files/Pods-RecyCashRN/Pods-RecyCashRN.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0A6ABF2742108E008F1E27 /* Mohave-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Light.ttf"; sourceTree = "<group>"; };
+		DE0A6AC02742108E008F1E27 /* Mohave-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		DE0A6AC12742108E008F1E27 /* Mohave-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-MediumItalic.ttf"; sourceTree = "<group>"; };
+		DE0A6AC22742108E008F1E27 /* Mohave-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Italic.ttf"; sourceTree = "<group>"; };
+		DE0A6AC32742108E008F1E27 /* Mohave-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Medium.ttf"; sourceTree = "<group>"; };
+		DE0A6AC42742108E008F1E27 /* Mohave-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-SemiBold.ttf"; sourceTree = "<group>"; };
+		DE0A6AC52742108E008F1E27 /* Mohave-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-BoldItalic.ttf"; sourceTree = "<group>"; };
+		DE0A6AC62742108E008F1E27 /* Mohave-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-LightItalic.ttf"; sourceTree = "<group>"; };
+		DE0A6AC72742108E008F1E27 /* Mohave-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Regular.ttf"; sourceTree = "<group>"; };
+		DE0A6AC82742108E008F1E27 /* Mohave-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -91,13 +111,13 @@
 				0ACFC252C8A6C9BB8059FD15 /* Pods-RecyCashRN-RecyCashRNTests.debug.xcconfig */,
 				983133A0AC51016C103A6012 /* Pods-RecyCashRN-RecyCashRNTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* RecyCashRN */ = {
 			isa = PBXGroup;
 			children = (
+				DE0A6ABE2742108E008F1E27 /* fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -134,6 +154,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				11EF774A03FBAF6C588ED346 /* Pods */,
+				8998AE9C4A72473FADE1E991 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +168,31 @@
 				00E356EE1AD99517003FC87E /* RecyCashRNTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8998AE9C4A72473FADE1E991 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
+		DE0A6ABE2742108E008F1E27 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DE0A6ABF2742108E008F1E27 /* Mohave-Light.ttf */,
+				DE0A6AC02742108E008F1E27 /* Mohave-SemiBoldItalic.ttf */,
+				DE0A6AC12742108E008F1E27 /* Mohave-MediumItalic.ttf */,
+				DE0A6AC22742108E008F1E27 /* Mohave-Italic.ttf */,
+				DE0A6AC32742108E008F1E27 /* Mohave-Medium.ttf */,
+				DE0A6AC42742108E008F1E27 /* Mohave-SemiBold.ttf */,
+				DE0A6AC52742108E008F1E27 /* Mohave-BoldItalic.ttf */,
+				DE0A6AC62742108E008F1E27 /* Mohave-LightItalic.ttf */,
+				DE0A6AC72742108E008F1E27 /* Mohave-Regular.ttf */,
+				DE0A6AC82742108E008F1E27 /* Mohave-Bold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +291,16 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DE0A6ACB2742108E008F1E27 /* Mohave-MediumItalic.ttf in Resources */,
+				DE0A6ACE2742108E008F1E27 /* Mohave-SemiBold.ttf in Resources */,
+				DE0A6AC92742108E008F1E27 /* Mohave-Light.ttf in Resources */,
+				DE0A6AD22742108E008F1E27 /* Mohave-Bold.ttf in Resources */,
+				DE0A6AD12742108E008F1E27 /* Mohave-Regular.ttf in Resources */,
+				DE0A6AD02742108E008F1E27 /* Mohave-LightItalic.ttf in Resources */,
+				DE0A6ACD2742108E008F1E27 /* Mohave-Medium.ttf in Resources */,
+				DE0A6ACC2742108E008F1E27 /* Mohave-Italic.ttf in Resources */,
+				DE0A6ACA2742108E008F1E27 /* Mohave-SemiBoldItalic.ttf in Resources */,
+				DE0A6ACF2742108E008F1E27 /* Mohave-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

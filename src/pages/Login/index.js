@@ -2,38 +2,49 @@ import React from 'react';
 import {
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
-
+import { useNavigation } from '@react-navigation/core';
 import Logo from '../../assets/images/logo.svg';
-export default function Login() {
-    return (
-        <View>
-            <View style={styles.container}>
-                <Logo style={styles.logo} />
-                <Text style={styles.textLogo}>Recycash</Text>
-            </View>
-            <View style={styles.form}>
-                <TextInput 
-                style={styles.inputLogin} 
-                placeholder="Digite seu e-mail"
-                placeholderTextColor="#263238CC" />
-                <TextInput 
-                style={styles.inputLogin} 
-                placeholder="Digite sua senha" 
-                textContentType="password"
-                placeholderTextColor="#263238CC"
-                secureTextEntry={true} />
+import CustomTextInput from '../../components/CustomTextInput';
+import CustomButton from '../../components/CustomButton';
 
-                <TouchableOpacity
-                style={styles.buttonLogin}>
-                    <Text style={styles.buttonLoginText}>Entrar</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-    )
+export default function Login() {
+  const navigation = useNavigation();
+
+  return <>
+      <View>
+          <View style={styles.container}>
+              <Logo style={styles.logo} />
+              <Text style={styles.textLogo}>Recycash</Text>
+          </View>
+          <View style={styles.form}>
+            <CustomTextInput 
+              style={styles.inputLogin} 
+              placeholder="Digite seu e-mail"
+              placeholderTextColor="#263238CC" />
+            <CustomTextInput 
+              style={styles.inputLogin} 
+              placeholder="Digite sua senha" 
+              textContentType="password"
+              placeholderTextColor="#263238CC"
+              secureTextEntry={true} />
+
+            <CustomButton 
+              onPress={() => navigation.navigate('Tabs')}>
+                Entrar
+              </CustomButton>
+            <CustomButton
+              style={styles.buttonNewAccount}
+              textStyle={styles.buttonNewAccountText}
+              onPress={() => navigation.navigate('NewAccount')}
+              styleClean={true}>
+               Ainda não tem uma conta?
+            </CustomButton>
+          </View>
+      </View>
+  </>
 }
 
 const styles = StyleSheet.create({
@@ -45,22 +56,13 @@ const styles = StyleSheet.create({
       
     },
     textLogo: {
-      fontFamily: 'Mohave',
+      fontFamily: 'Mohave-Regular',
       fontSize: 72,
       lineHeight: 100,
       color: '#000000'
     },
     form: {
       paddingHorizontal: 70
-    },
-    inputLogin: {
-      borderRadius: 8,
-      borderColor: '#263238',
-      borderWidth: 1,
-      height: 56,
-      fontSize: 16,
-      marginTop: 15,
-      paddingLeft: 12,
     },
     buttonLogin: {
       marginTop: 18,
@@ -73,9 +75,21 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
     },
     buttonLoginText: {
-      fontFamily: 'Mohave',
+      fontFamily: 'Mohave-Regular',
       fontSize: 18,
       lineHeight: 24,
       color: '#fff'
+    },
+    buttonNewAccount: {
+      marginTop: 18,
+      alignItems: 'center',
+      height: 18,
+      justifyContent: 'center'
+    },
+    buttonNewAccountText: {
+      fontFamily: 'Mohave-Regular',
+      fontSize: 16,
+      lineHeight: 20,
+      textDecorationLine: 'underline' 
     }
   });
