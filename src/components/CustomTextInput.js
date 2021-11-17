@@ -5,13 +5,15 @@ import {
     TextInput,
   } from 'react-native';
 
-export default function CustomTextInput({style, placeholder, placeholderTextColor = '#263238CC', secureTextEntry}) {
+export default function CustomTextInput({style, placeholder, placeholderTextColor = '#263238CC', secureTextEntry, value, onChangeText}) {
     return (
       <TextInput 
               style={[style, styles.inputLogin]} 
               placeholder={placeholder}
               placeholderTextColor={placeholderTextColor}
-              secureTextEntry={secureTextEntry} />
+              secureTextEntry={secureTextEntry}
+              value={value}
+              onChangeText={onChangeText} />
     );
 }
 

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
+  Alert,
   StyleSheet,
   Text,
   View,
@@ -8,9 +9,29 @@ import { useNavigation } from '@react-navigation/core';
 import Logo from '../../assets/images/logo.svg';
 import CustomTextInput from '../../components/CustomTextInput';
 import CustomButton from '../../components/CustomButton';
+import ApiService from '../../services/ApiService';
 
 export default function Login() {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
   const navigation = useNavigation();
+
+  const doLogin = async(email, password) => {
+    console.log(email, password);
+    ApiService().post('login', {email: email, senha: password})
+    .then((response) => {
+      if(response?.data?.autenticado){
+        ApiService().setUser(response.data);
+        navigation.navigate('Tabs');
+      }
+    })
+    .catch((error) => {
+      const dataError = error.toJSON();
+      console.log(dataError);
+      Alert.alert("Ops...", "Usuário ou senha inválidos.",);
+    });
+  };
 
   return <>
       <View>
@@ -22,16 +43,20 @@ export default function Login() {
             <CustomTextInput 
               style={styles.inputLogin} 
               placeholder="Digite seu e-mail"
-              placeholderTextColor="#263238CC" />
+              placeholderTextColor="#263238CC" 
+              value={email}
+              onChangeText={(text) => setEmail(text)} />
             <CustomTextInput 
               style={styles.inputLogin} 
               placeholder="Digite sua senha" 
               textContentType="password"
               placeholderTextColor="#263238CC"
-              secureTextEntry={true} />
+              secureTextEntry={true}
+              value={password}
+              onChangeText={(text) => setPassword(text)}/>
 
             <CustomButton 
-              onPress={() => navigation.navigate('Tabs')}>
+              onPress={() => doLogin(email, password)}>
                 Entrar
               </CustomButton>
             <CustomButton
