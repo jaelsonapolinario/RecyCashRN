@@ -10,14 +10,18 @@ import Logo from '../../assets/images/logo.svg';
 import CustomTextInput from '../../components/CustomTextInput';
 import CustomButton from '../../components/CustomButton';
 import ApiService from '../../services/ApiService';
+import LoadingModal from '../../components/LoadingModal';
 
 export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [modalIsVisible, setModalIsVisible] = useState(false);
 
   const navigation = useNavigation();
 
   const doLogin = async(email, password) => {
+    setModalIsVisible(true);
+
     console.log(email, password);
     ApiService().post('login', {email: email, senha: password})
     .then((response) => {
@@ -30,7 +34,8 @@ export default function Login() {
       const dataError = error.toJSON();
       console.log(dataError);
       Alert.alert("Ops...", "Usuário ou senha inválidos.",);
-    });
+    })
+    .finally(() => setModalIsVisible(false));
   };
 
   return <>
@@ -66,6 +71,7 @@ export default function Login() {
               styleClean={true}>
                Ainda não tem uma conta?
             </CustomButton>
+            <LoadingModal isVisible={modalIsVisible} />
           </View>
       </View>
   </>
