@@ -10,6 +10,7 @@ import {
 import InputSearchImg from '../../assets/images/input-search.svg';
 import CustomButton from '../../components/CustomButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/core';
 
 const DATA = [
     {
@@ -47,21 +48,28 @@ const Header = () => (
          </TouchableOpacity>
     </View>
 );
-const Item = ({ data }) => (
-    <View style={styles.item}>
-        <View style={styles.itemPhoto}>
-            <Icon name="user-circle" size={48} color="#D7E8FF" />
+const Item = ({ data }) => {
+    const navigation = useNavigation();
+
+    return <>
+        <View style={styles.item}>
+            <View style={styles.itemPhoto}>
+                <Icon name="user-circle" size={48} color="#D7E8FF" />
+            </View>
+            <View style={styles.itemInfo}>
+                <Text style={styles.title}>{data.nome}</Text>
+                <Text style={styles.info}>Avaliações: {data.avaliacoes}</Text>
+                <Text style={styles.info}>Distância: {data.distancia}</Text>
+            </View>
+            <View style={styles.itemAction}>
+                <CustomButton 
+                    style={styles.smallButton} 
+                    textStyle={styles.smallButtonText}
+                    onPress={() => navigation.navigate('Perfil')}>Ver Perfil</CustomButton>
+            </View>
         </View>
-        <View style={styles.itemInfo}>
-            <Text style={styles.title}>{data.nome}</Text>
-            <Text style={styles.info}>Avaliações: {data.avaliacoes}</Text>
-            <Text style={styles.info}>Distância: {data.distancia}</Text>
-        </View>
-        <View style={styles.itemAction}>
-            <CustomButton style={styles.smallButton} textStyle={styles.smallButtonText}>Ver Perfil</CustomButton>
-        </View>
-    </View>
-);
+    </>
+};
 
 export default function Search() {
     const renderItem = ({ item }) => (

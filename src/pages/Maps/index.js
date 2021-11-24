@@ -7,13 +7,18 @@ import {
     Text,
      
 } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 import MapView, {Callout, Marker} from 'react-native-maps';
 import InputSearchImg from '../../assets/images/input-search.svg';
 import Geolocation from '@react-native-community/geolocation';
 import CustomButton from '../../components/CustomButton';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+
+
 export default function Maps() {
+    const navigation = useNavigation();
+
     const [currentPosition, setCurrentPosition] = useState({
         latitude: -23.5492243,
         longitude: -46.5813785,
@@ -116,7 +121,10 @@ export default function Maps() {
                                                     <Text style={styles.info}>Distância: {marker.data.distancia}</Text>
                                                 </View>
                                                 <View style={styles.itemAction}>
-                                                    <CustomButton style={styles.smallButton} textStyle={styles.smallButtonText}>Ver Perfil</CustomButton>
+                                                    <CustomButton 
+                                                        style={styles.smallButton} 
+                                                        textStyle={styles.smallButtonText}
+                                                        onPress={() => navigation.navigate('Perfil')}>Ver Perfil</CustomButton>
                                                 </View>
                                             </View>
                                         </Callout>
