@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { 
     StyleSheet,
@@ -12,6 +13,8 @@ import CustomButton from '../../components/CustomButton';
 import DashboardItem from '../../components/DashboardItem';
 
 export default function Home() {
+    const navigation = useNavigation();
+
     return <>
     <ScrollView style={styles.container}>
         <View style={styles.newCollectContainer}>
@@ -20,7 +23,10 @@ export default function Home() {
                 <Text style={styles.textTitleNewCollectContainer}>Pedido de Coleta</Text>
                 <Text style={styles.textNewCollectContainer}>Tem material pronto para descarte?</Text>
                 <Text style={styles.textNewCollectContainer}>Faça um agendamento de coleta!</Text>
-                <CustomButton style={styles.smallButton} textStyle={styles.smallButtonText}>Nova Coleta</CustomButton>
+                <CustomButton 
+                    style={styles.smallButton} 
+                    textStyle={styles.smallButtonText}
+                    onPress={() => navigation.navigate('AddCollections')}>Nova Coleta</CustomButton>
             </View>
         </View>
         <View style={styles.historyContainer}>

@@ -15,6 +15,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './src/pages/Login'
 import NewAccount from './src/pages/NewAccount';
 import Tabs from './src/components/Tabs';
+import AddCollections from './src/pages/Collections/add';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,10 @@ export default function App() {
             name='NewAccount'
             component={NewAccount}
             options={{title: 'Nova conta'}} />
+          <Stack.Screen
+            name='AddCollections'
+            component={AddCollections}
+            options={{title: 'Nova coleta'}} />
         </Stack.Navigator>
       </NavigationContainer>
   </>
